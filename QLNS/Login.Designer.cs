@@ -28,110 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bt_exit = new System.Windows.Forms.Button();
-            this.bt_login = new System.Windows.Forms.Button();
-            this.tx_pass = new System.Windows.Forms.TextBox();
-            this.tx_user = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            bt_exit = new Button();
+            bt_login = new Button();
+            tx_pass = new TextBox();
+            tx_user = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bt_exit);
-            this.panel1.Controls.Add(this.bt_login);
-            this.panel1.Controls.Add(this.tx_pass);
-            this.panel1.Controls.Add(this.tx_user);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 317);
-            this.panel1.TabIndex = 0;
+            panel1.Controls.Add(bt_exit);
+            panel1.Controls.Add(bt_login);
+            panel1.Controls.Add(tx_pass);
+            panel1.Controls.Add(tx_user);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(2, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(637, 317);
+            panel1.TabIndex = 0;
             // 
             // bt_exit
             // 
-            this.bt_exit.Location = new System.Drawing.Point(456, 234);
-            this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(94, 29);
-            this.bt_exit.TabIndex = 4;
-            this.bt_exit.Text = "Thoát";
-            this.bt_exit.UseVisualStyleBackColor = true;
-            this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
+            bt_exit.Location = new Point(456, 234);
+            bt_exit.Name = "bt_exit";
+            bt_exit.Size = new Size(94, 29);
+            bt_exit.TabIndex = 4;
+            bt_exit.Text = "Thoát";
+            bt_exit.UseVisualStyleBackColor = true;
+            bt_exit.Click += bt_exit_Click;
             // 
             // bt_login
             // 
-            this.bt_login.Location = new System.Drawing.Point(338, 234);
-            this.bt_login.Name = "bt_login";
-            this.bt_login.Size = new System.Drawing.Size(94, 29);
-            this.bt_login.TabIndex = 3;
-            this.bt_login.Text = "Đăng nhập";
-            this.bt_login.UseVisualStyleBackColor = true;
-            this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
+            bt_login.Location = new Point(338, 234);
+            bt_login.Name = "bt_login";
+            bt_login.Size = new Size(94, 29);
+            bt_login.TabIndex = 3;
+            bt_login.Text = "Đăng nhập";
+            bt_login.UseVisualStyleBackColor = true;
+            bt_login.Click += bt_login_Click;
             // 
             // tx_pass
             // 
-            this.tx_pass.Location = new System.Drawing.Point(289, 157);
-            this.tx_pass.Name = "tx_pass";
-            this.tx_pass.Size = new System.Drawing.Size(244, 27);
-            this.tx_pass.TabIndex = 2;
-            this.tx_pass.Text = "20082001";
-            this.tx_pass.UseSystemPasswordChar = true;
+            tx_pass.Location = new Point(289, 157);
+            tx_pass.Name = "tx_pass";
+            tx_pass.Size = new Size(244, 27);
+            tx_pass.TabIndex = 2;
+            tx_pass.Text = "1";
+            tx_pass.UseSystemPasswordChar = true;
             // 
             // tx_user
             // 
-            this.tx_user.Location = new System.Drawing.Point(289, 95);
-            this.tx_user.Name = "tx_user";
-            this.tx_user.Size = new System.Drawing.Size(249, 27);
-            this.tx_user.TabIndex = 1;
-            this.tx_user.Text = "hungnv";
+            tx_user.Location = new Point(289, 95);
+            tx_user.Name = "tx_user";
+            tx_user.Size = new Size(249, 27);
+            tx_user.TabIndex = 1;
+            tx_user.Text = "hungnv";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mật khẩu";
+            label3.AutoSize = true;
+            label3.Location = new Point(95, 157);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Mật khẩu";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên đăng nhập";
+            label2.AutoSize = true;
+            label2.Location = new Point(95, 95);
+            label2.Name = "label2";
+            label2.Size = new Size(107, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Tên đăng nhập";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(244, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ĐĂNG NHẬP";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(244, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(188, 38);
+            label1.TabIndex = 0;
+            label1.Text = "ĐĂNG NHẬP";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(641, 317);
-            this.Controls.Add(this.panel1);
-            this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(641, 317);
+            Controls.Add(panel1);
+            Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

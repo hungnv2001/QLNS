@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,12 +29,27 @@ namespace QLNS.DAO
         public DataTable ExcuteQuery(string query)
         {
             DataTable data = new DataTable();
-            using (SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLNS1;User ID=sa;Password=sa"))
+            DataSet ds = new DataSet();
+            using (SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLNS1;Integrated Security=True"))
             {
+                connection.Close();
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
+                adapter.Fill(ds);
+                int j = 0;
+                try
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        data= ds.Tables[i];
+                        j = i;
+                    }
+                }
+                catch (Exception)
+                {
+                    data = ds.Tables[j];
+                }
                 connection.Close();
             }
             return data;
@@ -41,7 +57,7 @@ namespace QLNS.DAO
         public int ExcuteNonQuery(string query)
         {
             int data = 1;
-            using (SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLNS1;User ID=sa;Password=sa"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLNS1;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
@@ -54,7 +70,7 @@ namespace QLNS.DAO
         public object ExcuteScalar(string query)
         {
             object data = 0;
-            using (SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLNS1;User ID=sa;Password=sa"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLNS1;Integrated Security=True"))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);

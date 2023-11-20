@@ -23,7 +23,7 @@ namespace QLNS
 
         private void bt_exit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn thật sự muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Error)==DialogResult.Yes)
+            if (MessageBox.Show("Bạn thật sự muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -45,28 +45,28 @@ namespace QLNS
             }
             catch (Exception)
             {
-                result=null;
-                x= false;
-                
+                result = null;
+                x = false;
+
             }
             if (x)
             {
-               // Service service = new Service();
-                FormAll form = new FormAll();
+                FormAll form = new FormAll(result);
                 this.Hide();
-               // service.Show();
-               form.ShowDialog();               
+                form.ShowDialog();
+                this.Show();
+                tx_pass.Text = "";
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác");
             }
-        }     
+        }
         private DataTable Login1(string user, string pass)
         {
             AcountDAO acount = new AcountDAO();
-            return acount.Login(user,pass);
+            return acount.Login(user, pass);
         }
-      
+
     }
 }

@@ -63,6 +63,16 @@ namespace QLNS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _52092357656_07cbdfd16e_c {
+            get {
+                object obj = ResourceManager.GetObject("52092357656_07cbdfd16e_c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_page {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-page", resourceCulture);
